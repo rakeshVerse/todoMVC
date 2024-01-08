@@ -64,7 +64,7 @@ form input {
 }
 
 ul {
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   width: 52rem;
   background-color: #fff;
   text-align: left;
