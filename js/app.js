@@ -8,28 +8,28 @@ class Controller {
 
     this.view.displayTasks(this.model.tasks);
 
-    this.view.bindAddTask(this.handleAddTask);
-    this.view.bindEditTask(this.handleEditTask);
-    this.view.bindDeleteTask(this.handleDeleteTask);
-    this.view.bindToggleTask(this.handleToggleTask);
+    this.view.bindAddTask(this.#handleAddTask);
+    this.view.bindEditTask(this.#handleEditTask);
+    this.view.bindDeleteTask(this.#handleDeleteTask);
+    this.view.bindToggleTask(this.#handleToggleTask);
   }
 
-  handleAddTask = (taskText) => {
+  #handleAddTask = (taskText) => {
     this.model.addTask(taskText);
     this.view.displayTasks(this.model.tasks);
   };
 
-  handleEditTask = (id, updatedText) => {
+  #handleEditTask = (id, updatedText) => {
     this.model.editTask(id, updatedText);
     this.view.displayTasks(this.model.tasks);
   };
 
-  handleDeleteTask = (id) => {
+  #handleDeleteTask = (id) => {
     this.model.deleteTask(id);
     this.view.displayTasks(this.model.tasks);
   };
 
-  handleToggleTask = (id) => {
+  #handleToggleTask = (id) => {
     this.model.toggleTask(id);
     this.view.displayTasks(this.model.tasks);
   };
